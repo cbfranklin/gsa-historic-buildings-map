@@ -14,9 +14,14 @@
     <div class="container">
         <div id="historicPreservationMap"></div>
     </div>
-    <iframe width="1px" height="1px" src="https://youtube.com/v/DPBvMsT3prg&autoplay=1&loop=1"></iframe>
+    <div id="templates">
+        <script type="text/template" class="template-popup">
+            <a href="{{Hist Build URL}}">{{Building Name}}</a>
+        </script>
+    </div>
     <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
-    <script src="js/points.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="data/historicBuildingsData.js"></script>
     <script src="js/map.js"></script>
 </body>
 </htm
