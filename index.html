@@ -16,8 +16,9 @@
     </div>
     <div id="templates">
         <script type="text/template" class="template-popup">
-            <a target="_blank" href="{{Hist Build URL}}">{{Building Name}}</a>
-            {{#IMAGE data}}<img src="Building_Rollover_Images/{{IMAGE data}}"/>{{/IMAGE data}}
+            <div class="historic-buildings-popup">
+                <a target="_blank" href="{{Hist Build URL}}">{{Building Name}}</a><br>{{#IMAGE data}}<img src="Building_Rollover_Images/{{IMAGE data}}" />{{/IMAGE data}}
+            </div>
         </script>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
