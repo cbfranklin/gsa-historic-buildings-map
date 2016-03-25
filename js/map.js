@@ -39,7 +39,7 @@ $(function() {
         e.layer.openPopup();
     });
     markerLayer.on('mouseout', function(e) {
-        e.layer.closePopup();
+        //e.layer.closePopup();
     });
     //});
 });
