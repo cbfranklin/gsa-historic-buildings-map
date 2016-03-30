@@ -25,14 +25,14 @@ $(function() {
             var markerTemplate = $('#templates .template-marker').html();
             var markerContent = Mustache.render(markerTemplate, data);
             var icon = L.divIcon({
-                //iconSize: [70, 20],
+                iconSize: [30,30],
+                popupAnchor: [0, -10],
                 //iconAnchor: [35, 10],
                 className: 'historic-buildings-marker',
                 html: markerContent
             })
             L.marker(latlng, {
                 icon: icon,
-                iconSize: [50,50],
             }).bindPopup(popupContent, {
                 closeButton: false,
                 minWidth: 320
