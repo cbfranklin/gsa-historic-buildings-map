@@ -5,7 +5,7 @@ $(function() {
     //setView([coords for map center], zoom-level])
     historicPreservationMap = L.mapbox.map('historicPreservationMap', 'mapbox.streets').setView([38.893106, -77.032891], 15);
     var markerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
-    
+
     // Disable drag and zoom handlers.
     /*map.dragging.disable();
     map.touchZoom.disable();
@@ -20,9 +20,19 @@ $(function() {
         if (!lat.match(emptyRegEx) && lat !== NaN && lat !== '' && !lng.match(emptyRegEx) && lng !== NaN && lng !== '') {
             var latlng = [lat, lng];
             console.log('accepted', data['Building Name'], lat, lng)
-            var template = $('#templates .template-popup').html();
-            var popupContent = Mustache.render(template, data);
-            L.marker(latlng).bindPopup(popupContent, {
+            var popupTemplate = $('#templates .template-popup').html();
+            var popupContent = Mustache.render(popupTemplate, data);
+            var markerTemplate = $('#templates .template-marker').html();
+            var markerContent = Mustache.render(markerTemplate, data);
+            var icon = L.divIcon({
+                //iconSize: [70, 20],
+                //iconAnchor: [35, 10],
+                className: 'historic-buildings-marker',
+                html: markerContent
+            })
+            L.marker(latlng, {
+                icon: icon
+            }).bindPopup(popupContent, {
                 closeButton: false,
                 minWidth: 320
             }).addTo(markerLayer);

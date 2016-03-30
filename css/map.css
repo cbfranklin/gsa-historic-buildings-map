@@ -3,27 +3,27 @@
     height: 700px
 }
 
-#historic-buildings-popup {
+.historic-buildings-popup {
     text-align: center;
 }
 
-#historic-buildings-popup .leaflet-popup-content-wrapper {
+.historic-buildings-popup .leaflet-popup-content-wrapper {
     /*background: #2c3e50;
     color: #fff;
     font-size: 16px;
     line-height: 24px;*/
 }
 
-#historic-buildings-popup .leaflet-popup-content-wrapper a {
+.historic-buildings-popup .leaflet-popup-content-wrapper a {
     /*color: rgba(255, 255, 255, 0.5);*/
 }
 
-#historic-buildings-popup .leaflet-popup-tip-container {
+.historic-buildings-popup .leaflet-popup-tip-container {
     /*width: 30px;
     height: 15px;*/
 }
 
-#historic-buildings-popup .leaflet-popup-tip {
+.historic-buildings-popup .leaflet-popup-tip {
     /*border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 15px solid #2c3e50;*/
