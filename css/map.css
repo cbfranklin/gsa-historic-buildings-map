@@ -7,6 +7,16 @@
     text-align: center;
 }
 
+.historic-buildings-number{
+    background:blue;
+    color:white;
+    width:30px;
+    height:30px;
+    border-radius:5px;
+    text-align:center;
+    padding-top:5px;
+    font-size:16px;
+}
 .historic-buildings-popup .leaflet-popup-content-wrapper {
     /*background: #2c3e50;
     color: #fff;

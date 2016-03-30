@@ -31,7 +31,8 @@ $(function() {
                 html: markerContent
             })
             L.marker(latlng, {
-                icon: icon
+                icon: icon,
+                iconSize: [50,50],
             }).bindPopup(popupContent, {
                 closeButton: false,
                 minWidth: 320
