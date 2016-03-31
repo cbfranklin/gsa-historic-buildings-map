@@ -8,23 +8,50 @@
 }
 
 .historic-buildings-number {
-    background: blue;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4fa0d1+0,4fa0d1+60,316c8c+100 */
+    background: #4fa0d1;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #4fa0d1 0%, #4fa0d1 60%, #316c8c 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #4fa0d1 0%, #4fa0d1 60%, #316c8c 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #4fa0d1 0%, #4fa0d1 60%, #316c8c 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4fa0d1', endColorstr='#316c8c', GradientType=0);
+    /* IE6-9 */
     color: white;
     width: 30px;
-    height: 30px;
-    border-radius: 5px;
+    height: 33px;
+    border-radius: 12px;
     text-align: center;
     padding-top: 5px;
     font-size: 16px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
+    border: 1px solid #316c8c;
 }
 
 .leaflet-popup-tip {
-    border-top-color: blue;
+    border-top-color: #316c8c;
 }
 
 .leaflet-popup-content-wrapper {
-    background: blue;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4fa0d1+0,4fa0d1+60,316c8c+100 */
+    background: #4fa0d1;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #4fa0d1 0%, #4fa0d1 60%, #316c8c 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #4fa0d1 0%, #4fa0d1 60%, #316c8c 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #4fa0d1 0%, #4fa0d1 60%, #316c8c 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4fa0d1', endColorstr='#316c8c', GradientType=0);
+    /* IE6-9 */
     color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
+    border: 1px solid #316c8c;
 }
 
 .historic-buildings-popup a {
@@ -42,8 +69,9 @@
     width: 0;
     height: 0;
     margin: 0;
+    margin-top: -3px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid blue;
+    border-top: 10px solid #316c8c;
     box-shadow: none;
 }
