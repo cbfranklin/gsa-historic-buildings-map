@@ -1,10 +1,20 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 #historicPreservationMap {
     width: 100%;
     height: 700px
 }
 
 .historic-buildings-popup {
-    text-align: center;
+    overflow:hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.historic-buildings-popup img{
+    float:left;
+    display:block;
+    padding-right:10px;
 }
 
 .historic-buildings-number {
@@ -28,6 +38,7 @@
     font-size: 16px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
     border: 1px solid #316c8c;
+    font-weight: bold;
 }
 
 .leaflet-popup-tip {

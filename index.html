@@ -8,6 +8,7 @@
     <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/map.css" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <div id="templates">
         <script type="text/template" class="template-popup">
             <div class="historic-buildings-popup">
-                <a target="_blank" href="{{Hist Build URL}}">{{Building Name}}<br>{{#IMAGE data}}<img src="Building_Rollover_Images/{{IMAGE data}}" />{{/IMAGE data}}</a>
+                <a target="_blank" href="{{Hist Build URL}}">{{#IMAGE data}}<img src="Building_Rollover_Images/{{IMAGE data}}" />{{/IMAGE data}}{{Building Name}}</a>
             </div>
         </script>
         <script type="text/template" class="template-marker">
