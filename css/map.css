@@ -10,6 +10,7 @@ body{
 .historic-buildings-popup {
     overflow:hidden;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size:14px;
 }
 .historic-buildings-popup img{
     float:left;
@@ -59,9 +60,9 @@ body{
     /* IE6-9 */
     color: white;
     border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
+    /*-webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.41);*/
     border: 1px solid #316c8c;
 }
 
