@@ -26,7 +26,7 @@ $(function() {
             var markerContent = Mustache.render(markerTemplate, data);
             var icon = L.divIcon({
                 iconSize: [30,30],
-                popupAnchor: [0, -10],
+                popupAnchor: [0, 25],
                 //iconAnchor: [35, 10],
                 className: 'historic-buildings-marker',
                 html: markerContent
