@@ -3,7 +3,7 @@ var historicBuildingsData = [
 ,
 {"Expanded Map ID Marker":"2","Building Name":"Theodore Roosevelt Federal Building","Street Address":"1900 E St NW ","Lat":"38.8947639","Lng":"-77.04416204","Hist Build URL":"Not in BPP","Poster?":"N","Visual Profile Photo":"N","IMAGE data":"TheodoreRoosevelt_OPMArchitecture1.jpg","Notes":"no copy or images"}
 ,
-{"Expanded Map ID Marker":"3","Building Name":"Department of the Interior - South (U.S. Public Health Service)","Street Address":"1951 Constitution Ave NW ","Lat":"38.89302025","Lng":"-77.04457177","Hist Build URL":"Not in BPP","Poster?":"","Visual Profile Photo":"","IMAGE data":"have email out to Sarah to ID","Notes":""}
+{"Expanded Map ID Marker":"3","Building Name":"Department of the Interior - South (U.S. Public Health Service)","Street Address":"1951 Constitution Ave NW ","Lat":"38.89302025","Lng":"-77.04457177","Hist Build URL":"Not in BPP","Poster?":"","Visual Profile Photo":"","IMAGE data":"Have TIF from Sarah G. Joyce needs to make 64 sq","Notes":""}
 ,
 {"Expanded Map ID Marker":"4","Building Name":"Stewart Lee Udall Department of the Interior Building","Street Address":"1849 C St NW ","Lat":"38.89445405","Lng":"-77.04260719","Hist Build URL":"http://www.gsa.gov/portal/ext/html/site/hb/method/get/category/25431?actionParameter=buildingsBySearchForm&hostUri=portal&buildingVO.searchBy=BUILDING_NUMBER&hbContentPath=&state.id=8&__multiselect_selectedCities=&selectedBuildings=DC0020ZZ&__multiselect_selectedBuildings=&__multiselect_buildingNos=&__multiselect_selectedArchiects=&buildingVO.buildingType.id=-1&buildingVO.yearBegin=&buildingVO.yearFinish=","Poster?":"N","Visual Profile Photo":"N","IMAGE data":"Dept_Interior_16448r.jpg","Notes":""}
 ,
