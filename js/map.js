@@ -35,7 +35,7 @@ $(function() {
                 icon: icon,
             }).bindPopup(popupContent, {
                 closeButton: false,
-                minWidth: 320
+                minWidth: 280
             }).addTo(markerLayer);
         } else {
             console.log('rejected:', data['Building Name'])
