@@ -10,7 +10,10 @@ body{
 .historic-buildings-popup {
     overflow:hidden;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size:14px;
+}
+.historic-buildings-popup a {
+    color: white;
+    font-size:15px;
 }
 .historic-buildings-popup img{
     float:left;
@@ -68,9 +71,7 @@ body{
 
 /* */
 
-.historic-buildings-popup a {
-    color: white;
-}
+
 
 .historic-buildings-marker-tip-container {
     width: 20px;
