@@ -15,10 +15,14 @@ body{
     color: white;
     font-size:15px;
 }
+.historic-buildings-popup a:hover {
+    color: white;
+}
 .historic-buildings-popup img{
     float:left;
     display:block;
-    padding-right:10px;
+    margin-right:10px;
+    border:2px solid #fff;
 }
 
 .historic-buildings-number {
