@@ -43,6 +43,10 @@ $(function() {
     }
     markerLayer.on('mouseover', function(e) {
         e.layer.openPopup();
+        console.log(e, e.layer)
+    });
+    markerLayer.on('mouseout', function(e) {
+        e.layer.closePopup();
     });
 
 
@@ -79,5 +83,5 @@ $(function() {
         [38.895513, -77.033653],
         [38.895467, -77.035117]
     ]
-     L.polygon(panhs,{color:'yellow',opacity:.6}).addTo(historicPreservationMap);
+    L.polygon(panhs, { color: '#fdcc03', opacity: .6 }).addTo(historicPreservationMap);
 });
