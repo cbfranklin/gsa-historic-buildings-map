@@ -45,9 +45,9 @@ $(function() {
         e.layer.openPopup();
         console.log(e, e.layer)
     });
-    markerLayer.on('mouseout', function(e) {
+    /*markerLayer.on('mouseout', function(e) {
         e.layer.closePopup();
-    });
+    });*/
 
 
 
