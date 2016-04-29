@@ -19,7 +19,6 @@ $(function() {
         var lng = data['Lng']
         if (!lat.match(emptyRegEx) && lat !== NaN && lat !== '' && !lng.match(emptyRegEx) && lng !== NaN && lng !== '') {
             var latlng = [lat, lng];
-            console.log('accepted', data['Building Name'], lat, lng)
             var popupTemplate = $('#templates .template-popup').html();
             var popupContent = Mustache.render(popupTemplate, data);
             var markerTemplate = $('#templates .template-marker').html();
@@ -37,13 +36,10 @@ $(function() {
                 closeButton: false,
                 minWidth: 280
             }).addTo(markerLayer);
-        } else {
-            console.log('rejected:', data['Building Name'])
         }
     }
     markerLayer.on('mouseover', function(e) {
         e.layer.openPopup();
-        console.log(e, e.layer)
     });
     /*markerLayer.on('mouseout', function(e) {
         e.layer.closePopup();
