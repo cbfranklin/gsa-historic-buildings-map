@@ -14,6 +14,7 @@
 <body>
     <div class="container">
         <div id="historicPreservationMap"></div>
+        <div id="historicPreservationTable"></div>
     </div>
     <div id="templates">
         <script type="text/template" class="template-popup">
@@ -26,6 +27,24 @@
             <div class="historic-buildings-marker-tip-container">
                 <div class="historic-buildings-marker-tip"></div>
             </div>
+        </script>
+        <script type="text/template" class="template-table">
+            <table class="table">
+                <thead>
+                    <th>Building Name</th>
+                    <th>Building Address</th>
+                </thead>
+                <tbody>
+                    {{#.}}
+                    {{#Expanded Map ID Marker}}
+                    <tr>
+                        <td><a href="{{Hist Build URL}}">{{Building Name}}</a></td>
+                        <td><a href="http://maps.google.com?q={{Street Address}} Washington DC">{{Street Address}}</td>
+        </tr>
+        {{/Expanded Map ID Marker}}
+    {{/.}}
+    </tbody>
+</table>
         </script>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>

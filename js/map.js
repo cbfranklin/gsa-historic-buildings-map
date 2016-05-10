@@ -1,49 +1,59 @@
 var historicPreservationMap;
 var emptyRegEx = "^\\s+$";
 $(function() {
-    L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yM2VwIiwiYSI6ImNpbTU4YXNxOTAxbGJ1am0zazFvaWdteXkifQ.80poTj-_kKTVI5fELbD5YA';
-    //setView([coords for map center], zoom-level])
-    historicPreservationMap = L.mapbox.map('historicPreservationMap', 'mapbox.streets').setView([38.893106, -77.032891], 15);
-    var markerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
+    L.mapbox.accessToken = 'pk.eyJ1Ijoic2NvdHR6YWNoZWsiLCJhIjoiY2ludDF6eDJxMTFmZnVrbTMwcGV5OWpqYSJ9.t4IyHjLn3Y_6dUQNk7H0og';
+    historicPreservationMap = L.mapbox.map('historicPreservationMap', 'mapbox.streets');
 
-    // Disable drag and zoom handlers.
-    /*map.dragging.disable();
-    map.touchZoom.disable();
-    map.doubleClickZoom.disable();
-    map.scrollWheelZoom.disable();
-    map.keyboard.disable();*/
+    var tableTemplate = $('#templates .template-table').html();
+    var tableContent = Mustache.render(tableTemplate, historicBuildingsData);
+    $('#historicPreservationTable').html(tableContent)
 
-    for (i in historicBuildingsData) {
-        var data = historicBuildingsData[i]
-        var lat = data['Lat'];
-        var lng = data['Lng']
-        if (!lat.match(emptyRegEx) && lat !== NaN && lat !== '' && !lng.match(emptyRegEx) && lng !== NaN && lng !== '') {
-            var latlng = [lat, lng];
-            var popupTemplate = $('#templates .template-popup').html();
-            var popupContent = Mustache.render(popupTemplate, data);
-            var markerTemplate = $('#templates .template-marker').html();
-            var markerContent = Mustache.render(markerTemplate, data);
-            var icon = L.divIcon({
-                iconSize: [30, 30],
-                popupAnchor: [0, 25],
-                //iconAnchor: [35, 10],
-                className: 'historic-buildings-marker',
-                html: markerContent
-            })
-            L.marker(latlng, {
-                icon: icon,
-            }).bindPopup(popupContent, {
-                closeButton: false,
-                minWidth: 280
-            }).addTo(markerLayer);
+    historicPreservationMap.whenReady(function() {
+        historicPreservationMap.setView([38.893106, -77.032891], 15);
+        var markerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
+
+        // Disable drag and zoom handlers.
+        /*historicPreservationMap.dragging.disable();
+        historicPreservationMap.touchZoom.disable();
+        historicPreservationMap.doubleClickZoom.disable();
+        historicPreservationMap.scrollWheelZoom.disable();
+        historicPreservationMap.keyboard.disable();*/
+
+        for (i in historicBuildingsData) {
+            var data = historicBuildingsData[i]
+            var lat = data['Lat'];
+            var lng = data['Lng']
+            if (!lat.match(emptyRegEx) && lat !== NaN && lat !== '' && !lng.match(emptyRegEx) && lng !== NaN && lng !== '') {
+                var latlng = [lat, lng];
+                var popupTemplate = $('#templates .template-popup').html();
+                var popupContent = Mustache.render(popupTemplate, data);
+                var markerTemplate = $('#templates .template-marker').html();
+                var markerContent = Mustache.render(markerTemplate, data);
+                var icon = L.divIcon({
+                    iconSize: [30, 30],
+                    popupAnchor: [0, 25],
+                    //iconAnchor: [35, 10],
+                    className: 'historic-buildings-marker',
+                    html: markerContent
+                })
+                L.marker(latlng, {
+                    icon: icon,
+                }).bindPopup(popupContent, {
+                    closeButton: false,
+                    minWidth: 280
+                }).addTo(markerLayer);
+            }
         }
-    }
-    markerLayer.on('mouseover', function(e) {
-        e.layer.openPopup();
+        markerLayer.on('mouseover', function(e) {
+            e.layer.openPopup();
+        });
+        /*markerLayer.on('mouseout', function(e) {
+            e.layer.closePopup();
+        });*/
+
+        L.polygon(panhs, { color: '#fdcc03', opacity: .6 }).addTo(historicPreservationMap);
     });
-    /*markerLayer.on('mouseout', function(e) {
-        e.layer.closePopup();
-    });*/
+
 
 
 
@@ -79,5 +89,5 @@ $(function() {
         [38.895513, -77.033653],
         [38.895467, -77.035117]
     ]
-    L.polygon(panhs, { color: '#fdcc03', opacity: .6 }).addTo(historicPreservationMap);
+
 });
