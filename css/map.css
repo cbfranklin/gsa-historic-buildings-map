@@ -7,6 +7,12 @@ body{
     height: 700px
 }
 
+#historicPreservationLegend img{
+    float:left;
+    clear:both;
+    margin-right:10px;
+}
+
 .historic-buildings-popup {
     overflow:hidden;
     font-family: 'Source Sans Pro', sans-serif;
