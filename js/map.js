@@ -8,6 +8,13 @@ $(function() {
     var tableContent = Mustache.render(tableTemplate, historicBuildingsData);
     $('#historicPreservationTable').html(tableContent)
 
+    $('#historicPreservationTable table').addClass('stripe').DataTable({
+        "info": false,
+        "searching": false,
+        "paging": false,
+        "responsive": true
+    });
+
     historicPreservationMap.whenReady(function() {
         historicPreservationMap.setView([38.893106, -77.032891], 15);
         var markerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
