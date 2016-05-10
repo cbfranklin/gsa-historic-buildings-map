@@ -38,21 +38,25 @@
         <script type="text/template" class="template-table">
             <table class="table">
                 <thead>
+                    <th>#</th>
                     <th>Building Name</th>
                     <th>Street Address</th>
                 </thead>
                 <tbody>
-                    {{#.}} {{#Expanded Map ID Marker}} {{#Street Address}}
-                    <tr>
-                        <td><a href="{{Hist Build URL}}">{{Building Name}}</a></td>
-                        <td><a href="http://maps.google.com?q={{Street Address}} Washington DC">{{Street Address}}</td>
-        </tr>
-        {{/Street Address}}
-        {{/Expanded Map ID Marker}}
-    {{/.}}
-    </tbody>
-</table>
-        </script>
+                    {{#.}}
+                {{#Expanded Map ID Marker}}
+                {{#Street Address}}
+                <tr>
+                    <td>{{Expanded Map ID Marker}}</td>
+                    <td><a href="{{Hist Build URL}}">{{Building Name}}</a></td>
+                    <td><a href="http://maps.google.com?q={{Street Address}} Washington DC">{{Street Address}}</td>
+                </tr>
+                {{/Street Address}}
+                {{/Expanded Map ID Marker}}
+            {{/.}}
+        </tbody>
+        </table>
+    </script>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
