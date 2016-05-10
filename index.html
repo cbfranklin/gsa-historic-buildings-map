@@ -14,6 +14,7 @@
 
 <body>
     <div class="container">
+        <a title="Text-Only Version of GSA Historic Preservation Map" class="sr-only">Text-Only Version</a>
         <div id="historicPreservationMap"></div>
         <div id="historicPreservationTable"></div>
     </div>
@@ -36,10 +37,7 @@
                     <th>Street Address</th>
                 </thead>
                 <tbody>
-                    {{#.}}
-                    {{#Expanded Map ID Marker}}
-                    {{#Street Address}}
-
+                    {{#.}} {{#Expanded Map ID Marker}} {{#Street Address}}
                     <tr>
                         <td><a href="{{Hist Build URL}}">{{Building Name}}</a></td>
                         <td><a href="http://maps.google.com?q={{Street Address}} Washington DC">{{Street Address}}</td>
