@@ -12,7 +12,8 @@ $(function() {
         "info": false,
         "searching": false,
         "paging": false,
-        "responsive": true
+        "responsive": true,
+        "scrollY": 300
     });
 
     historicPreservationMap.whenReady(function() {
