@@ -7,10 +7,20 @@ body{
     height: 700px
 }
 
-#historicPreservationLegend img{
+#historicPreservationLegend{
+    background:#eee;
+    height:40px;
+    padding:10px;
+    margin:10px auto;
+}
+
+#historicPreservationLegend .item{
+    width:18px;
+    height:18px;
+    background:#ffdc57;
     float:left;
-    clear:both;
     margin-right:10px;
+    border:1px solid #999;
 }
 
 .historic-buildings-popup {
