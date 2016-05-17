@@ -13,11 +13,12 @@ $(function() {
         "searching": false,
         "paging": false,
         "responsive": true,
-        "scrollY": 300
+        "scrollY": 300,
+        "order": [[ 1, "asc" ]]
     });
 
     historicPreservationMap.whenReady(function() {
-        historicPreservationMap.setView([38.893106, -77.032891], 15);
+        historicPreservationMap.setView([38.893106, -77.032891], 14);
         var markerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
 
         // Disable drag and zoom handlers.

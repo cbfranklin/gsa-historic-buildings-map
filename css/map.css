@@ -2,9 +2,13 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.leaflet-container{
+    z-index:1;
+}
+
 #historicPreservationMap {
     width: 100%;
-    height: 700px
+    height: 400px
 }
 
 #historicPreservationLegend{
@@ -17,10 +21,10 @@ body{
 #historicPreservationLegend .item{
     width:18px;
     height:18px;
-    background:#ffdc57;
+    background:rgba(255,220,87,0.7);
     float:left;
     margin-right:10px;
-    border:1px solid #999;
+    border:2px solid #ffdc57;
 }
 
 .historic-buildings-popup {

@@ -19,7 +19,7 @@
         <div id="historicPreservationMap"></div>
         <div id="historicPreservationLegend">
                 <h3 class="sr-only">Legend</h3>
-                <div class="item"></div><span class="sr-only">The yellow-shaded area on the above map represents the</span> Pennsylvania Avenue National Historic Site
+                <div class="item"></div>Tinted area represents the Pennsylvania Avenue National Historic Site
         </div>
         <div id="historicPreservationTable"></div>
     </div>
@@ -38,7 +38,7 @@
         <script type="text/template" class="template-table">
             <table class="table">
                 <thead>
-                    <th>#</th>
+                    <th><span class="sr-only">Marker Number</span>#</th>
                     <th>Building Name</th>
                     <th>Street Address</th>
                 </thead>
@@ -48,8 +48,8 @@
                 {{#Street Address}}
                 <tr>
                     <td>{{Expanded Map ID Marker}}</td>
-                    <td><a href="{{Hist Build URL}}">{{Building Name}}</a></td>
-                    <td><a href="http://maps.google.com?q={{Street Address}} Washington DC">{{Street Address}}</td>
+                    <td><a target"_blank" href="{{Hist Build URL}}">{{Building Name}}</a></td>
+                    <td><a target="_blank" href="http://maps.google.com?q={{Street Address}} Washington DC">{{Street Address}}</td>
                 </tr>
                 {{/Street Address}}
                 {{/Expanded Map ID Marker}}
