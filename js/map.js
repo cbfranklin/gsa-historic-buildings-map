@@ -14,12 +14,13 @@ $(function() {
         "paging": false,
         "responsive": true,
         "scrollY": 300,
-        "order": [[ 1, "asc" ]]
+        "order": [
+            [1, "asc"]
+        ]
     });
 
     historicPreservationMap.whenReady(function() {
         historicPreservationMap.setView([38.893106, -77.032891], 14);
-        var markerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
 
         // Disable drag and zoom handlers.
         /*historicPreservationMap.dragging.disable();
@@ -27,40 +28,68 @@ $(function() {
         historicPreservationMap.doubleClickZoom.disable();
         historicPreservationMap.scrollWheelZoom.disable();
         historicPreservationMap.keyboard.disable();*/
+        
+        var mainMarkerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
+        
+        //var lafayetteMarkerLayer = L.mapbox.featureLayer().addTo(historicPreservationMap);
+        //var lafayetteMarkerCluster = new L.MarkerClusterGroup();
 
-        for (i in historicBuildingsData) {
-            var data = historicBuildingsData[i]
-            var lat = data['Lat'];
-            var lng = data['Lng']
-            if (!lat.match(emptyRegEx) && lat !== NaN && lat !== '' && !lng.match(emptyRegEx) && lng !== NaN && lng !== '') {
-                var latlng = [lat, lng];
-                var popupTemplate = $('#templates .template-popup').html();
-                var popupContent = Mustache.render(popupTemplate, data);
-                var markerTemplate = $('#templates .template-marker').html();
-                var markerContent = Mustache.render(markerTemplate, data);
-                var icon = L.divIcon({
-                    iconSize: [30, 30],
-                    popupAnchor: [0, 25],
-                    //iconAnchor: [35, 10],
-                    className: 'historic-buildings-marker',
-                    html: markerContent
-                })
-                L.marker(latlng, {
-                    icon: icon,
-                }).bindPopup(popupContent, {
-                    closeButton: false,
-                    minWidth: 280
-                }).addTo(markerLayer);
-            }
-        }
-        markerLayer.on('mouseover', function(e) {
-            e.layer.openPopup();
-        });
-        /*markerLayer.on('mouseout', function(e) {
-            e.layer.closePopup();
-        });*/
+        addMarkersTo(historicBuildingsData,mainMarkerLayer)
+        //addMarkersTo(lafayetteSquareData,lafayetteMarkerLayer,lafayetteMarkerCluster)
 
+        //penn ave national historic site polygon
         L.polygon(panhs, { color: '#fdcc03', opacity: .6 }).addTo(historicPreservationMap);
+        
+        function addMarkersTo(markerArray,layer,cluster) {
+            for (i in markerArray) {
+                
+                if(cluster){
+                    var layerOrCluster = cluster;
+                }
+                else{
+                    var layerOrCluster = layer;
+                }
+
+                var data = markerArray[i]
+                var lat = data['Lat'];
+                var lng = data['Lng']
+                if (!lat.match(emptyRegEx) && lat !== NaN && lat !== '' && !lng.match(emptyRegEx) && lng !== NaN && lng !== '') {
+                    var latlng = [lat, lng];
+                    var popupTemplate = $('#templates .template-popup').html();
+                    var popupContent = Mustache.render(popupTemplate, data);
+                    var markerTemplate = $('#templates .template-marker').html();
+                    var markerContent = Mustache.render(markerTemplate, data);
+                    var icon = L.divIcon({
+                        iconSize: [30, 30],
+                        popupAnchor: [0, 25],
+                        //iconAnchor: [35, 10],
+                        className: 'historic-buildings-marker',
+                        html: markerContent
+                    })
+                    L.marker(latlng, {
+                        icon: icon,
+                    }).bindPopup(popupContent, {
+                        closeButton: true,
+                        minWidth: 280
+                    }).addTo(layerOrCluster);
+                }
+                else{
+                    console.log(data['Building Name'])
+                }
+            }
+
+            if(cluster){
+                layerOrCluster.addTo(layer)
+            }
+
+            layer.on('click', function(e) {
+                e.layer.openPopup();
+            });
+
+            /*layer.on('mouseout', function(e) {
+                e.layer.closePopup();
+            });*/
+        }
     });
 
 

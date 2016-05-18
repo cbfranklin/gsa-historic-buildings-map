@@ -1,10 +1,10 @@
-body{
+body {
     font-family: 'Source Sans Pro', sans-serif;
-    color:#333;
+    color: #333;
 }
 
-.leaflet-container{
-    z-index:1;
+.leaflet-container {
+    z-index: 1;
 }
 
 #historicPreservationMap {
@@ -12,38 +12,41 @@ body{
     height: 400px
 }
 
-#historicPreservationLegend{
-    background:#eee;
-    padding:5px 10px 15px 10px;
-    margin:10px auto;
+#historicPreservationLegend {
+    background: #eee;
+    padding: 5px 10px 15px 10px;
+    margin: 10px auto;
 }
 
-#historicPreservationLegend .item{
-    width:18px;
-    height:18px;
-    background:rgba(255,220,87,0.5);
-    float:left;
-    margin-right:10px;
-    border:4px solid #ffdc57;
+#historicPreservationLegend .item {
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 220, 87, 0.5);
+    float: left;
+    margin-right: 10px;
+    border: 4px solid #ffdc57;
 }
 
 .historic-buildings-popup {
-    overflow:hidden;
+    overflow: hidden;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 .historic-buildings-popup a {
     color: white;
-    font-size:15px;
-    font-weight:600;
+    font-size: 15px;
+    font-weight: 600;
 }
+
 .historic-buildings-popup a:hover {
     color: white;
 }
-.historic-buildings-popup img{
-    float:left;
-    display:block;
-    margin-right:10px;
-    border:2px solid #fff;
+
+.historic-buildings-popup img {
+    float: left;
+    display: block;
+    margin-right: 10px;
+    border: 2px solid #fff;
 }
 
 .historic-buildings-number {
@@ -94,9 +97,13 @@ body{
     border: 1px solid #316c8c;
 }
 
-/* */
+.leaflet-container a.leaflet-popup-close-button {
+    color: #fff;
+}
 
-
+.leaflet-container a.leaflet-popup-close-button:hover {
+    color: #fff;
+}
 
 .historic-buildings-marker-tip-container {
     width: 20px;
