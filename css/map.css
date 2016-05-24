@@ -7,7 +7,8 @@ body {
     z-index: 1;
 }
 
-#historicPreservationMap {
+#historicPreservationMap,
+#lafayetteSquareMap {
     width: 100%;
     height: 400px
 }
