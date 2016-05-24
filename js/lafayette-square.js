@@ -20,7 +20,7 @@ $(function() {
     });
 
     lafayetteSquareMap.whenReady(function() {
-        lafayetteSquareMap.setView([38.897587, -77.034672], 16);
+        lafayetteSquareMap.setView([38.899470, -77.036525], 18);
 
         // Disable drag and zoom handlers.
         /*lafayetteSquareMap.dragging.disable();
