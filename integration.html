@@ -1,0 +1,52 @@
+<a title="Text-Only Version of GSA Historic Preservation Map" class="sr-only" href="#historicPreservationTable">Text-Only Version</a>
+<div id="historicPreservationMap"></div>
+<div id="historicPreservationLegend">
+    <h3>Legend</h3>
+    <div class="item"></div>Tinted area represents the Pennsylvania Avenue National Historic Site
+</div>
+<div id="historicPreservationTable"></div>
+<div id="templates">
+    <script type="text/template" class="template-popup">
+        <div class="historic-buildings-popup">
+            <a target="_blank" href="{{Hist Build URL}}">{{#IMAGE data}}<img src="/projects/historic-buildings/Building_Rollover_Images/{{IMAGE data}}" />{{/IMAGE data}}{{Building Name}}</a>
+        </div>
+    </script>
+    <script type="text/template" class="template-marker">
+        <div class="historic-buildings-number">{{Expanded Map ID Marker}}</div>
+        <div class="historic-buildings-marker-tip-container">
+            <div class="historic-buildings-marker-tip"></div>
+        </div>
+    </script>
+    <script type="text/template" class="template-table">
+        <table>
+            <thead>
+                <th><span class="sr-only">Marker Number</span>#</th>
+                <th>Building Name</th>
+                <th>Street Address</th>
+            </thead>
+            <tbody>
+                {{#.}} {{#Expanded Map ID Marker}} {{#Street Address}}
+                <tr>
+                    <td>{{Expanded Map ID Marker}}</td>
+                    <td><a target "_blank" href="{{Hist Build URL}}">{{Building Name}}</a></td>
+                    <td>{{Street Address}}</td>
+                </tr>
+                {{/Street Address}}
+                {{/Expanded Map ID Marker}}
+            {{/.}}
+        </tbody>
+        </table>
+    </script>
+</div>
+<!-- styles -->
+<script>
+$(function() {
+    $('head').append('<link href="https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css" rel="stylesheet" />');
+    $('head').append('<link rel="stylesheet" href="/projects/historic-buildings/css/map.css" />');
+})
+</script>
+<!-- scripts -->
+<script src="https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+<script src="/projects/historic-buildings/data/historicBuildingsData.js"></script>
+<script src="/projects/historic-buildings/js/map.js"></script>
