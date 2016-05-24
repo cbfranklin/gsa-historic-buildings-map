@@ -13,7 +13,7 @@ $(function() {
         "searching": false,
         "paging": false,
         "responsive": true,
-        "scrollY": 200,
+        "scrollY": 150,
         "order": [
             [1, "asc"]
         ]
